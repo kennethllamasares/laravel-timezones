@@ -1,0 +1,12 @@
+{
+    "name": "kennethllamasares/laravel-timezones",
+    "description": "Timezone bundle for Laravel.",
+    "keywords": ["laravel", "timezone"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kenneth Llamasares",
+            "email": "webdev.kenneth@gmail.com"
+        }
+    ]
+}
