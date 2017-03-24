@@ -8,5 +8,13 @@
             "name": "Kenneth Llamasares",
             "email": "webdev.kenneth@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "KennethLlamasares\\Timezones\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "~5"
+    }
 }
