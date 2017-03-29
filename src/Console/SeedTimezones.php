@@ -12,7 +12,7 @@ class SeedTimezones extends Command
     {
         $data = json_decode(file_get_contents(__DIR__ . '/../../resources/timezones.json'), true);
 
-        \DB::table(\Config::get('timezones.table_name'))->truncate();
+        \DB::table(\Config::get('timezones.table_name'))->delete();
 
         foreach ($data as $tzs) {
             foreach ($tzs as $offset => $timezones) {
