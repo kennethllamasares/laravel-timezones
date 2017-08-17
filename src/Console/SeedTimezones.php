@@ -11,6 +11,7 @@ class SeedTimezones extends Command
     public function fire()
     {
         $data = json_decode(file_get_contents(__DIR__ . '/../../resources/timezones.json'), true);
+        $now  = date('Y-m-d H:i:s');
 
         \DB::table(\Config::get('timezones.table_name'))->delete();
 
@@ -20,7 +21,9 @@ class SeedTimezones extends Command
                     \DB::table(\Config::get('timezones.table_name'))->insert(array(
                         'label' => $timezone['label'],
                         'value' => $timezone['value'],
-                        'offset' => $offset
+                        'offset' => $offset,
+                        'created_at' => $now,
+                        'updated_at' => $now
                     ));
                 }
             }
