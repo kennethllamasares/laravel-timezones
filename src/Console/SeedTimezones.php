@@ -8,7 +8,7 @@ class SeedTimezones extends Command
     protected $signature = 'timezones:seed';
     protected $description = 'Command description.';
 
-    public function fire()
+    public function handle()
     {
         $data = json_decode(file_get_contents(__DIR__ . '/../../resources/timezones.json'), true);
         $now  = date('Y-m-d H:i:s');
