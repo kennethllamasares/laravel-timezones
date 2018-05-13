@@ -15,7 +15,6 @@ class CreateTimezonesTable extends Migration
             $table->string('label')->nullable();
             $table->string('value')->nullable();
             $table->string('offset')->nullable();
-            $table->timestamps();
         });
     }
     public function down()
